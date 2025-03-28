@@ -21,13 +21,14 @@ public class Server {
 
             DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-
             Scanner sc = new Scanner(System.in);
 
             while (true) {
+                //Message
                 String message = in.readUTF();
                 System.out.println("Client : " + message);
 
+                //Response
                 if (message.equalsIgnoreCase("bye")) {
                     break;
                 }

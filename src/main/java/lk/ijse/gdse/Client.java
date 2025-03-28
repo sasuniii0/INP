@@ -21,14 +21,17 @@ public class Client {
             Scanner sc = new Scanner(System.in);
 
             while (true) {
+                // display who is speaking
                 System.out.println("Client : ");
                 String message = sc.nextLine();
                 out.writeUTF(message);
                 out.flush();
 
+                // check if the message is "bye"
                 if (message.equalsIgnoreCase("bye")) {
                     break;
                 }
+                // receive the message
                 String receivedMessage = in.readUTF();
                 System.out.println("Server : " + receivedMessage);
 
