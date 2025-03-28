@@ -15,6 +15,7 @@ public class Client {
 
             //String message = "HI.. I am from Client";
             Scanner sc = new Scanner(System.in);
+            System.out.println("input msg");
             String message = sc.nextLine();
 
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
